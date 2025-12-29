@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "deus-ex-sofa"
+version = "1.0.0"
+description = "Samsung TV remote control via pure Python WebSocket"
+authors = [{name = "Jarad DeLorenzo"}]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[project.scripts]
+deus-ex-sofa = "deus_ex_sofa.cli:main"
+tv = "deus_ex_sofa.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/delorenj/deus-ex-sofa"
+Issues = "https://github.com/delorenj/deus-ex-sofa/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/deus_ex_sofa"]
